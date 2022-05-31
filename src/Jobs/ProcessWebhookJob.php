@@ -19,5 +19,6 @@ abstract class ProcessWebhookJob implements ShouldQueue
     public function __construct(
         public WebhookCall $webhookCall
     ) {
+        $this->onQueue('high');
     }
 }
